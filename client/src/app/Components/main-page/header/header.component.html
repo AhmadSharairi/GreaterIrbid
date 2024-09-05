@@ -1,0 +1,189 @@
+
+<!-- Top Navigation -->
+<div class="superNav border-bottom py-1 bg-black text-light">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-auto">
+        <i class="fa fa-phone me-2" aria-hidden="true"></i>02/7242225
+      </div>
+      <div class="col-auto">
+        <i class="fa fa-envelope me-2" aria-hidden="true"></i>
+        <a href="mailto:info@irbid.gov.jo" class="text-light text-decoration-none">info&#64;irbid.gov.jo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-lg bg-dark sticky-top navbar-light p-3 shadow-sm fixed-top">
+
+
+  <div class="superNav border-bottom py-2 bg-dark text-light">
+  </div>
+  <div class="container">
+
+
+    <ul class="navbar-nav ms-auto  ">
+
+
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link  text-uppercase" href="#" routerLink="/" routerLinkActive="active">الدليل الارشادي لنظام الأبنية</a>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            للتبليغ عن الابار والحفر وشبهات الفساد
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink"
+            dir="rtl">
+            <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=tech.mobeasy.hofra">تحميل التطبيق جوجل بلاي</a></li>
+            <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.irbid.nazaha_project">تحميل التطبيق للأيفون</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <li class="nav-item">
+        <a class="nav-link mx-2 text-uppercase" href="#" routerLink="/shop" routerLinkActive="active">رضا المواطنين</a>
+      </li>
+
+
+      <li class="nav-item">
+        <a href="https://com.irbid.gov.jo/" class="flash-warning">شكاوي</a>
+       </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link mx-2 text-uppercase" href="https://webmail.irbid.gov.jo/" routerLink="/contact">البريد الالكتروني</a>
+      </li>
+
+
+
+
+      <li class="nav-item">
+        <a class="nav-link mx-2 text-uppercase" routerLinkActive="active"
+          href="https://portal.jordan.gov.jo/wps/portal#/">الحكومة الإلكترونية</a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link mx-2 text-uppercase" routerLink="/about" routerLinkActive="active" href="#">إستثمر في إربد</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mx-2 text-uppercase" routerLink="/about" routerLinkActive="active" href="#">إستثمر في الأردن</a>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link mx-2 text-uppercase" (click)="navigateToElectric()"  routerLinkActive="active" href="#">الخدمات الإلكترونية</button>
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
+
+
+<!-- Secondary Navigation --><!-- Secondary Navigation -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-light fixed-top">
+  <div class="container">
+
+    <div class="jordanLogo">
+      <a href="">
+        <img src="/assets/images/Jordan_coat_of_arms.png" alt="بلدية اربد الكبرى" style="height: 120px; width: 100px;">
+      </a>
+    </div>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto my-3">
+        <li class="nav-item">
+          <a class="nav-link mx-2 text-uppercase design" routerLink="/contact" href="https://irbid.gov.jo/?page_id=1964">إتصل بنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2 text-uppercase design" routerLink="/ads" href="https://irbid.gov.jo/?page_id=9123">إعلانات</a>
+        </li>
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle design" href="#" id="projectsDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> المشاريع </a>
+          <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="projectsDropdown" dir="rtl">
+            <li><a class="dropdown-item" target="_blank" href="https://irbid.gov.jo/wp-content/uploads/2023/12/SMC-English.pdf">مشاريع الاتحاد الأوربي smc – انجليزي</a></li>
+            <li><a class="dropdown-item" target="_blank" href="https://irbid.gov.jo/wp-content/uploads/2023/12/SMC-Arabic.pdf">مشاريع الاتحادالأوربي smc – عربي</a></li>
+            <li><a class="dropdown-item" href="https://irbid.gov.jo/?page_id=8544">مشروع فكرتي</a></li>
+            <li><a class="dropdown-item" href="https://irbid.gov.jo/?page_id=9455">برنامج صندوق العمل المناخي للشباب</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle design" href="#" id="tendersDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> عطاءات ومناقصات </a>
+          <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="tendersDropdown" dir="rtl">
+            <li><a class="dropdown-item" href="https://irbid.gov.jo/?page_id=9263">مناقصات</a></li>
+            <li><a class="dropdown-item" href="https://irbid.gov.jo/?page_id=6554">عطاءات</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle design" href="#" id="aboutDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> نبذة عن العمل البلدي </a>
+          <ul class="dropdown-menu dropdown-menu-end mega-menu" aria-labelledby="aboutDropdown" dir="rtl">
+            <div class="row">
+              <div class="col-lg-4">
+                <h6 class="dropdown-header">من نحن</h6>
+                <a class="dropdown-item" href="/form">رضا المواطنين</a>
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=2876">نبذة عن بلدية إربد</a>
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=6470">أعضاء مجلس البلدية</a>
+                <a class="dropdown-item" href="assets/pdf/مدونة-السلوك-الوظيفي-1.pdf">مدونة السلوك الوظيفي</a>
+
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=6484">الهيكل التنظيمي</a>
+                <a class="dropdown-item" href="assets/pdf/المجلس-البلدي.pdf">الهيكل الوظيفي</a>
+                <a class="dropdown-item" href="#">الخطة / الاستراتيجية</a>
+                <a class="dropdown-item" href="assets/pdf/إجراءات-متبعة.pdf">الإجراءات المتبعة والوثائق المطلوبة لإنجاز المعاملات</a>
+              </div>
+              <div class="col-lg-4">
+                <h6 class="dropdown-header">مجتمع إربد</h6>
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=7780">الرؤية والرسالة</a>
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=6405">تاريخ إربد</a>
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=6424">إحصائيات إربد</a>
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=6560">المؤسسات والدوائر الحكومية</a>
+              </div>
+              <div class="col-lg-4">
+                <h6 class="dropdown-header">تراث إربد</h6>
+                <a class="dropdown-item" href="https://irbid.gov.jo/?page_id=6711">مواقع تراثية</a>
+                <a class="dropdown-item" href="#">نشاطات تراثية</a>
+              </div>
+            </div>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle design" href="#" id="knowledgeStationsDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> محطات المعرفة </a>
+          <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="knowledgeStationsDropdown" dir="rtl">
+            <li><a class="dropdown-item" href="page/1">محطــات المــعرفة الأردنيـــة (إربد)</a></li>
+            <li><a class="dropdown-item" href="page/2">محطــات المــعرفة الأردنيـــة (الحصن)</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2 text-uppercase design" routerLink="/tours" href="https://jannah.jo/cities/irbid">الرحلات لمدينة إربد</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="kingster-logo-inner my-2">
+      <a href="/">
+        <img class="responsive-logo" src="https://irbid.gov.jo/wp-content/uploads/2020/02/بلدية-اربد-الكبرى.png" alt="بلدية اربد الكبرى" style="width: 250px; height: 90px;">
+      </a>
+    </div>
+  </div>
+</nav>
+

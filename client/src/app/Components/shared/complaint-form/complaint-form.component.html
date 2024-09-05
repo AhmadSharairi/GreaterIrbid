@@ -1,0 +1,132 @@
+<section class="form-notice" dir="rtl">
+  <div class="notice-content">
+    <h2>أخي المواطن، أختي المواطنة:</h2>
+    <ul>
+      <li>سيتم إلغاء الشكاوي المكررة لذا يرجى عدم تقديم أكثر من شكوى لنفس الموضوع.</li>
+      <li>سيتم إلغاء الشكاوي التي لا تحتوي على عنوان صحيح وواضح (المنطقة التي تتبع لها / اسم شارع / رقم بناية) وخصوصا
+        للشكاوي السرية. حيث سيتم إرسال رسالة اعتذار عن تقديم الخدمة.</li>
+    </ul>
+    <p><strong>ملاحظة:</strong> جميع الحقول المسبوقة بـــ " * " إجبارية وفي حالة عدم إدخال أي من هذه البيانات ستظهر
+      رسالة باللون الأحمر تطلب إدخال بيانات الحقل.</p>
+  </div>
+</section>
+
+
+
+
+
+<div class="form-container">
+  <form [formGroup]="complaintForm" (ngSubmit)="onSubmit()" dir="rtl">
+    <div class="form-group">
+      <label>إسم المشتكي</label>
+      <input matInput formControlName="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>رقم الموبايل </label>
+      <input matInput formControlName="phoneNumber" required>
+    </div>
+
+    <div class="form-group">
+      <label>البريد الإلكتروني</label>
+      <input matInput formControlName="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>الجنسية</label>
+      <input matInput formControlName="nationality" required>
+    </div>
+
+
+    <div class="form-group">
+      <label>المشتكي عليه</label>
+      <input matInput formControlName="againstName" required>
+    </div>
+
+    <div class="form-group">
+      <label>رقم جواز السفر لمقدم الطلب</label>
+      <input matInput formControlName="idNumber" required>
+    </div>
+
+
+
+    <div class="form-group">
+      <label>المنطقة</label>
+      <select formControlName="region" class="form-control">
+        <option value="" disabled selected>إختر اسم المنطقة</option>
+        <option value="irbid">إربد</option>
+        <option value="eidun">ايدون</option>
+        <option value="al-hisan">الحصن</option>
+        <option value="al-sirh">الصريح</option>
+        <option value="al-naima">النعيمة</option>
+        <option value="katm">كتم</option>
+        <option value="hawara">حوارة</option>
+        <option value="bushra">بشرى</option>
+        <option value="beit-ras">بيت راس</option>
+        <option value="kafr-jayz">كفر جايز</option>
+        <option value="al-mughayer">المغير</option>
+        <option value="saal">سال</option>
+        <option value="fuara">فوعرا</option>
+        <option value="horr">حور</option>
+        <option value="allal">علعال</option>
+        <option value="maro">مرو</option>
+        <option value="hukhma">حكما</option>
+        <option value="al-rawda">الروضة</option>
+        <option value="al-rabiya">الرابية</option>
+        <option value="al-nuzha">النزهة</option>
+        <option value="al-manara">المنارة</option>
+        <option value="al-nasr">النصر</option>
+        <option value="al-bariha">البارحة</option>
+        <option value="al-hashemiya">الهاشمية</option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label>أقرب موقع الشكوى</label>
+      <input matInput formControlName="nearestComplaintLocation" required>
+    </div>
+
+    <div class="form-group">
+      <label>إسم الشارع </label>
+      <input matInput formControlName="street" required>
+    </div>
+
+    <div class="form-group">
+      <label>رقم البناء/العمارة</label>
+      <input matInput formControlName="buildingNumber" required>
+    </div>
+
+    <div class="form-group">
+      <label for="date">تاريخ الشكوى</label>
+      <input  type="text" id="complaintDate" [value]="formattedDate || ''" readonly>
+    </div>
+
+    <div class="form-group">
+      <label> الشكوى</label>
+      <mat-radio-group formControlName="typePrivicy" required>
+        <mat-radio-button value="public">معلنة</mat-radio-button>
+        <mat-radio-button value="secret">سرية</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="form-group">
+      <label>تفاصيل الشكوى</label>
+      <textarea matInput formControlName="details" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>إرفاق صورة</label>
+      <input type="file" (change)="onFileChange($event)">
+    </div>
+
+
+      <div class="form-group">
+        <label>مشاركة الموقع</label>
+        <input matInput #shareLocationInput formControlName="shareLocation" required>
+      </div>
+    <div class="form-actions">
+      <button style="background-color: red;" type="submit" [disabled]="!complaintForm.valid">إرسال الشكوى</button>
+    </div>
+  </form>
+</div>

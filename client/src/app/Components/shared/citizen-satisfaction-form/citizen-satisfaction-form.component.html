@@ -1,0 +1,60 @@
+<app-shared-layout [backgroundImage]="backgroundImage" [title]="title" >
+
+</app-shared-layout>
+
+<div class="form-container">
+  <form [formGroup]="satisfactionForm" dir="rtl">
+    <div class="form-group">
+      <label for="fullName">الاسم الكامل*</label>
+      <input id="fullName" formControlName="fullName" type="text" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">رقم الهاتف*</label>
+      <input id="phoneNumber" matInput formControlName="phoneNumber" type="text" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">البريد الالكتروني (اختياري)</label>
+      <input id="email" matInput formControlName="email" type="email">
+    </div>
+
+    <div class="form-group">
+      <label for="rating">التقييم من خمس نجوم</label>
+    <div class="rating">
+      <input type="radio" name="rating" id="r5" (click)="rate(5)" value="5">
+      <label for="r5"></label>
+
+      <input type="radio" name="rating" id="r4" (click)="rate(4)" value="4">
+      <label for="r4"></label>
+
+      <input type="radio" name="rating" id="r3" (click)="rate(3)" value="3">
+      <label for="r3"></label>
+
+      <input type="radio" name="rating" id="r2" (click)="rate(2)" value="2">
+      <label for="r2"></label>
+
+      <input type="radio" name="rating" id="r1"(click)="rate(1)" value="1">
+      <label for="r1"></label>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">الملاحظات</label>
+      <textarea id="comments" formControlName="comments"></textarea>
+
+    </div>
+
+
+    <div class="form-actions">
+      <button (click)="onSubmit()" style="background-color:  rgb(93, 196, 107);" type="submit" [disabled]="!satisfactionForm.valid">إرسال</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+

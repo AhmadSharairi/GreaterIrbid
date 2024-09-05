@@ -1,0 +1,72 @@
+<div class="blog-title-container container" dir="rtl">
+  <div class="blog-title-content content-padding">
+    <header class="article-header clearfix">
+      <div class="article-date-wrapper post-date updated">
+        <div class="article-date-day">
+          {{ newsArticle?.date | date: 'dd' }}
+        </div>
+        <div class="article-date-month">
+          {{ getArabicMonth(newsArticle?.date) }}
+        </div>
+      </div>
+
+      <div class="vertical-line"></div>
+      <div class="article-header-right mx-3">
+        <h1 class="article-title" data-orig-font="43px" style="font-size: 43px;">{{ newsArticle?.title }}</h1>
+        <div class="blog-info-wrapper">
+          <!-- Other content can go here -->
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+
+
+<div class="content-container line-height">
+  <div class="content-wrap content-padding clearfix">
+    <div class="content-area">
+      <article id="post-9507"
+        class="post type-post status-publish format-standard has-post-thumbnail hentry category-blog">
+        <div class="article clearfix">
+          <div class="article-thumbnail media-image">
+            <img [src]="apiUrl + newsArticle?.imageUrl" width="960" height="450"
+              sizes="(max-width: 767px) 100vw, (max-width: 1150px) 100vw, 1150px" alt="">
+          </div>
+          <div class="article-content">
+            <p>
+              {{ newsArticle?.description }}
+            </p>
+
+            <div class="gallery" *ngIf="newsArticle?.images">
+              <figure class="image size-large" *ngFor="let image of newsArticle?.images">
+                <img [src]="apiUrl + image.url">
+              </figure>
+            </div>
+
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+</div>
+
+<div class="pagination-controls">
+  <!-- Button to go to the previous article -->
+  <button class="pagination-button" (click)="goToPreviousArticle()" [disabled]="!previousArticleId">
+    <i class="fa fa-chevron-left"></i>
+    <span class="pagination-text">السابق</span>
+  </button>
+
+  <!-- Button to go to the All News page -->
+  <button class="pagination-button all-news-button" (click)="goToAllNews()">
+    <i class="fa fa-newspaper icon"></i>
+    <span class="pagination-text">جميع الأخبار</span>
+  </button>
+
+  <!-- Button to go to the next article -->
+  <button class="pagination-button" (click)="goToNextArticle()" [disabled]="!nextArticleId">
+    <span class="pagination-text">التالي</span>
+    <i class="fa fa-chevron-right"></i>
+  </button>
+</div>

@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<div class="wrapper">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</div>
+
+<app-footer></app-footer>
+
+<ng-template #content>
+  <router-outlet></router-outlet>
+</ng-template>

@@ -1,0 +1,23 @@
+<div class="news-container">
+  <hr class="section-divider">
+  <div class="header">
+    <h2>آخر الأخبار والأحداث</h2>
+    <a routerLink="/news">عرض جميع الأخبار</a>
+  </div>
+
+  <!-- Conditional Rendering for No News Articles Message -->
+  <div *ngIf="!newsArticles || newsArticles.length === 0" class="no-news-message">
+    <p>لا توجد أخبار متاحة</p>
+  </div>
+  <!-- News Grid -->
+  <div *ngIf="newsArticles && newsArticles.length > 0" class="news-grid">
+    <div class="news-item" *ngFor="let newsArticle of newsArticles | slice:0:3">
+      <img [src]="apiUrl + newsArticle.imageUrl" alt="News Image" (click)="goToNewsDetail(newsArticle.id)">
+      <div class="news-content">
+        <h3  (click)="goToNewsDetail(newsArticle.id)">{{ newsArticle.title }}</h3>
+        <p (click)="goToNewsDetail(newsArticle.id)">{{ newsArticle.date | date: 'MMMM d, yyyy' }}</p>
+        <p (click)="goToNewsDetail(newsArticle.id)">{{ truncateDescription(newsArticle.description) }}</p>
+        <button (click)="goToNewsDetail(newsArticle.id)">اقرأ المزيد</button>
+      </div>
+    </div>
+  </div>

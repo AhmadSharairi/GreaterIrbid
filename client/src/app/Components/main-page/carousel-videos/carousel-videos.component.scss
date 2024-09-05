@@ -1,0 +1,40 @@
+/* carousel-videos.component.scss */
+.carousel {
+  height: 800px; /* Adjust this to your desired height */
+
+  .carousel-inner {
+    height: 100%; /* Ensure the inner container takes the full height */
+
+    .carousel-item {
+      display: flex; /* Use flex to center content */
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+      height: 100%; /* Ensure the item takes the full height */
+
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 100%; /* Set height to full container height */
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: none; /* Remove border if present */
+        }
+      }
+    }
+  }
+}
+
+/* Optional: Adjust the container or parent elements if needed */
+#carouselVideoExample {
+  width: 100%;
+  height: 150%; /* Set height to full container height */
+  max-height: 600px; /* Adjust to match your desired height */
+  overflow: hidden;
+}

@@ -1,0 +1,190 @@
+/* General Link Styles */
+a {
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Navigation Link Styles */
+.nav-link {
+  color: white !important;
+  font-size: 14.6px;
+  font-family: sans-serif;
+}
+
+
+.nav-link.design {
+  color: black !important;
+}
+
+/* SuperNav Styles */
+.superNav {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Form Control Styles */
+.form-control {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Navbar Styles */
+.navbar {
+  border-bottom: 5px solid #E5E9EF;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  z-index: 1; /* Ensure it is below the dropdown */
+}
+
+
+
+/* Dropdown Menu Styles */
+.dropdown-menu-dark .dropdown-item {
+  color: white !important;
+}
+
+.dropdown-menu-dark .dropdown-item:hover,
+.dropdown-menu-dark .dropdown-item:focus {
+  background-color: #495057;
+  color: white !important;
+}
+
+/* Adjust the z-index of the dropdown menu to ensure it is above the navbar */
+.dropdown-menu {
+  z-index: 1000; /* Ensure the dropdown is on top */
+}
+
+.dropdown-menu.mega-menu {
+  width: 500px;
+  padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+  .dropdown-menu.mega-menu {
+    width: 100%;
+  }
+  .responsive-logo {
+    width: 250px;
+  }
+  .jordanLogo{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding: 0.5rem 0.75rem;
+  }
+  .responsive-logo {
+    width: 200px;
+  }
+
+
+  .dropdown-menu.mega-menu {
+    width: 100%;
+    padding: 15px;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+}
+/* Add smooth transition for dropdown */
+.dropdown-menu {
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0.5rem;
+  }
+  .responsive-logo {
+    width: 150px;
+  }
+
+
+  .dropdown-menu.mega-menu {
+    width: 85%;
+    padding: 10px;
+  }
+  .nav-link {
+    font-size: 14px; /* Adjust as needed */
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-logo {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .centerOnMobile {
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 17px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-menu.mega-menu {
+    width: 80%;
+    padding: 8px;
+  }
+  .responsive-logo {
+    max-width: 100%;
+    height: auto;
+  }
+  .kingster-logo-inner {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: px;
+  }
+
+  .kingster-logo-inner a {
+    display: inline-block;
+    size: 10px;
+  }
+
+}
+
+
+/* Define the flashing animation شكاوي */
+@keyframes flash {
+  0% { color: red; }
+  50% { color: yellow; }
+  100% { color: red; }
+}
+
+/* Apply the animation to the .flash-warning class  شكاوي*/
+.flash-warning {
+  animation: flash 1s infinite;
+  font-weight: bold;
+  font-size: 16px;
+}

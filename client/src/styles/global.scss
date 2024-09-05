@@ -1,0 +1,144 @@
+.container {
+  padding: 20px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-divider {
+  border: 0;
+  height: 2px;
+  background: black;
+  margin-bottom: 25px;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.section h2 {
+  text-align: right;
+  white-space: nowrap;
+  font-size: x-large;
+  color: #2f7d32;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  min-width: 350px;
+  margin-right: 20px;
+  width: 450px;
+  height: 50%;
+}
+
+
+.scroll-button {
+  background: rgba(47, 125, 50, 0.8);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  pointer-events: all;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  position: absolute;
+  z-index: 1;
+}
+
+.scroll-button:hover {
+  background: rgba(47, 125, 50, 1);
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+// لا يوجد صور
+.no-items-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #555;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.no-images-message:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.no-items-message p {
+  margin: 0;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .carousel-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+    margin-right: 0; /* Remove right margin to fit one item perfectly */
+  }
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1.2em;
+  }
+
+  .news-content h3 {
+    font-size: 1em;
+  }
+
+  .news-content button {
+    padding: 8px 16px;
+  }
+
+  .carousel-item {
+    width: 100%; /* Make sure the item takes full width */
+    min-width: 100%; /* Ensure only one item is shown */
+  }
+
+  .scroll-button {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

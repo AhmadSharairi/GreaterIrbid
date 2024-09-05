@@ -1,0 +1,294 @@
+/* Center and constrain container */
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 2000px;
+  height: 200px;
+}
+
+.blog-title-container,
+.content-container {
+  position: relative;
+  /* Ensure container is positioned correctly */
+}
+
+/* Blog title container with background, shadow, and padding */
+.blog-title-container {
+  background-color: #BFBFBF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 15px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    height: auto;
+    /* Adjust height for smaller screens */
+    padding: 20px;
+  }
+}
+
+/* Center content container */
+.content-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Content wrapping with padding */
+.content-wrap {
+  padding: 20px;
+}
+
+/* Content area with max-width */
+.content-area {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Center align article */
+.article {
+  margin: auto;
+}
+
+/* Article thumbnail centered */
+.article-thumbnail {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.article-thumbnail img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modern Article Content Styling for Arabic */
+.article-content {
+  text-align: right;
+  direction: rtl;
+  margin: 20px auto;
+  font-family: 'Noto Sans Arabic', 'Amiri', sans-serif;
+  line-height: 1.8;
+  font-weight: 300;
+  font-size: 1.125rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #1aa716;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+/* Article title styling */
+.article-title {
+  font-size: 43px;
+  margin: 0;
+  color: white;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+}
+
+/* Grid layout for gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  justify-items: center;
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.gallery .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flex container for aligning date and title */
+.article-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Date wrapper with column alignment */
+.article-date-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+
+  .article-date-day {
+    font-size: 36px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+
+  .article-date-month {
+    font-size: 18px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Vertical line between date and title */
+.vertical-line {
+  width: 1px;
+  height: 60px;
+  background-color: #e6e6e6;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    height: 40px;
+  }
+
+  @media (max-width: 480px) {
+    height: 30px;
+  }
+}
+
+/* Title and content alignment */
+.article-header-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Base Styles for Pagination Controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  flex-wrap: wrap;
+
+}
+
+/* Styles for Individual Pagination Buttons */
+.pagination-button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #048147, #b7c5d4);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 8px;
+  /* Space between icon and text */
+}
+
+.pagination-button:hover {
+  background: linear-gradient(135deg, #048147, #d0d8e1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pagination-button:disabled {
+  background: #d0d0d0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+/* Additional Styles for the "All News" Button */
+.all-news-button {
+  background: linear-gradient(135deg, #126833, #e2e2e2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.all-news-button:hover {
+  background: linear-gradient(135deg, #126833, #d8d8d8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pagination-controls {
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  .pagination-button {
+    width: 100%;
+    font-size: 14px;
+
+    padding: 10px 20px;
+
+  }
+
+  .icon {
+    font-size: 16px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-button {
+    font-size: 12px;
+    padding: 8px 16px;
+
+  }
+
+  .icon {
+    font-size: 14px;
+
+  }
+}

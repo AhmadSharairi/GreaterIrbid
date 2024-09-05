@@ -1,0 +1,20 @@
+<div class="news-container col">
+  <hr class="">
+  <div class="header my-5">
+    <h2>جميع الأخبار والأحداث</h2>
+  </div>
+
+
+  <!-- News Grid -->
+  <div *ngIf="newsArticles && newsArticles.length > 0" class="news-grid">
+    <div class="news-item" *ngFor="let newsArticle of newsArticles">
+      <img [src]="apiUrl + newsArticle.imageUrl"(click)="goToNewsDetail(newsArticle.id)" alt="News Image" >
+      <div class="news-content">
+        <h3 (click)="goToNewsDetail(newsArticle.id)">{{ newsArticle.title }}</h3>
+        <p>{{ newsArticle.date | date: 'MMMM d, yyyy' }}</p>
+        <p>{{ truncateDescription(newsArticle.description) }}</p>
+        <button (click)="goToNewsDetail(newsArticle.id)">اقرأ المزيد</button>
+      </div>
+    </div>
+  </div>
+</div>

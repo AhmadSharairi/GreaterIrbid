@@ -1,0 +1,172 @@
+/* Container Styles */
+.wrapper-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.column {
+  position: relative;
+  flex: 1;
+  min-height: 400px; /* Adjusted for responsiveness */
+  box-sizing: border-box;
+}
+
+.column-content {
+  position: relative;
+  height: 100%;
+}
+
+.background-wrap,
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Inner Content */
+.column-content-inner {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 30px; /* Reduced padding for simplicity */
+}
+
+/* Title */
+.title-element {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem; /* Using rem units for scalability */
+  font-weight: 700;
+}
+
+/* Text Element */
+.text-element {
+  padding-bottom: 20px;
+}
+
+.text-element p {
+  font-size: 1rem; /* Using rem units for scalability */
+}
+
+/* Button */
+.button {
+  font-size: 0.9rem; /* Using rem units for scalability */
+  color: white;
+  padding: 10px 20px; /* Simplified padding */
+  background: green;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background: darkgreen;
+}
+
+/* Sections */
+.new-section-wrapper,
+.app-section-wrapper {
+  padding: 90px 0;
+  background-color: #1e1e1e;
+}
+
+.new-section-content,
+.app-section-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.new-section-column,
+.app-section-column {
+  flex: 1;
+  max-width: 48%;
+  min-width: 250px;
+  padding: 15px;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .column-content-inner {
+    padding: 20px; /* Adjusted padding */
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text-element p {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .column {
+    min-height: 500px;
+  }
+
+  .new-section-column,
+  .app-section-column {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    min-height: 400px;
+  }
+
+  .column-content-inner {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .text-element p {
+    font-size: 0.75rem;
+  }
+
+  .button {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .new-section-column,
+  .app-section-column {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .column-content-inner {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .text-element p {
+    font-size: 0.625rem;
+  }
+
+  .button {
+    font-size: 0.625rem;
+    padding: 4px 8px;
+  }
+}

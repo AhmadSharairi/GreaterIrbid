@@ -1,0 +1,139 @@
+.news-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+p, h3 {
+  direction: rtl;
+  text-align: right;
+}
+
+.section-divider {
+  border: 0;
+  height: 3px;
+  background: #2f7d32;
+  margin-bottom: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #2f7d32;
+  text-align: right;
+}
+
+.header a {
+  color: #2f7d32;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  text-align: right;
+}
+
+.header a:hover {
+  color: #145a2a;
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.news-item {
+  flex: 0 1 calc(33.333% - 20px); /* Three items per row, minus the gap */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.news-content {
+  padding: 15px;
+}
+
+.news-content h3 {
+  font-size: 1.2em;
+  color: #2f7d32;
+  margin: 0 0 10px;
+  cursor: pointer;
+}
+
+.news-content p {
+  margin: 0 0 10px;
+  color: #666;
+}
+
+.news-content button {
+  background-color: #2f7d32;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.news-content button:hover {
+  background-color: #145a2a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header h2 {
+    margin-bottom: 10px;
+  }
+
+  .news-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .news-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1.2em;
+  }
+
+  .news-content h3 {
+    font-size: 1em;
+  }
+
+  .news-content button {
+    padding: 8px 16px;
+  }
+}

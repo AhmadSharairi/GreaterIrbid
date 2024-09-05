@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="section">
+    <div class="title-container" >
+      <hr class="section-divider">
+      <h2>شيوع الرشوة</h2>
+    </div>
+   <!-- Conditional Rendering for No Items Message -->
+   <div *ngIf="!adviceItems || adviceItems.length === 0" class="no-items-message">
+    <p>لا توجد عناصر متاحة</p>
+  </div>
+    <div *ngIf="adviceItems && adviceItems.length > 0" class="carousel-container">
+      <button class="scroll-button left" (click)="scrollLeft('corruptionCarousel')">&#10094;</button>
+      <div class="carousel" id="corruptionCarousel">
+        <mat-card *ngFor="let item of adviceItems" class="carousel-item">
+          <img mat-card-image [src]="apiUrl +item.url" alt="Image">
+        </mat-card>
+      </div>
+      <button class="scroll-button right" (click)="scrollRight('corruptionCarousel')">&#10095;</button>
+    </div>
+  </div>
+</div>
